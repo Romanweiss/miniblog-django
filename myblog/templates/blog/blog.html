@@ -1,16 +1,37 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мини блог</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <title>Document</title>
 </head>
 <body>
-    {% for post in post_list %}
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.description }}</p>
-        <p><a href="{{ post.author }}">Ссылка на оригинал</a></p>
-        
-    {% endfor %}
+    <div class="shell">
+        <div class="border">
+
+            <div id="navigation">
+                <ul>
+                    <li><a href="#" class="active">Главная</a></li>
+                    <li><a href="№">Админ панель</a></li>
+                </ul>
+            </div>
+
+            <div id="main">
+                <div id="content">
+
+                    <div class="projects">
+                        <h3>Записи</h3>
+                        <div class="item">
+                            <div class="image_left">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
