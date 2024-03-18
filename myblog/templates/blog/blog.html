@@ -1,12 +1,14 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
     <title>Document</title>
 </head>
+
 <body>
     <div class="shell">
         <div class="border">
@@ -14,24 +16,44 @@
             <div id="navigation">
                 <ul>
                     <li><a href="#" class="active">Главная</a></li>
-                    <li><a href="№">Админ панель</a></li>
+                    <li><a href="#">Админ панель</a></li>
+
                 </ul>
             </div>
 
             <div id="main">
-                <div id="content">
+                <div id="content" class="left">
 
                     <div class="projects">
                         <h3>Записи</h3>
+
+                        {% for post in post_list %}
                         <div class="item">
-                            <div class="image_left">
-                                
+                            <div class="image left">
+                                <a href="#"><img src="{{ post.img.url }}" alt="" width="200px" /></a>
                             </div>
+                            <div class="text left">
+                                <h4>{{ post.title }}</h4>
+                                <p>{{ post.description}}</p>
+                                <p>Автор: {{ post.author }}</p>
+                            </div>
+                            <div class="cl">&nbsp;</div>
                         </div>
+                        {% endfor %}
+
                     </div>
                 </div>
+
+                <div class="cl">&nbsp;</div>
             </div>
+
+
+        </div>
+
+        <div id="footer">
+            <p class="copy right">Copyright &copy; Romanweiß 2024 </p>
         </div>
     </div>
 </body>
+
 </html>

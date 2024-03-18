@@ -17,6 +17,9 @@ class Post(models.Model):
     )
     date = models.DateField("Дата публикации")
 
+    # Пути к изображениям - %Y - указание года
+    img = models.ImageField('Изображение', upload_to='image/%Y')
+
     def __str__(self):
         return f"{self.title}, {self.author}"
 
