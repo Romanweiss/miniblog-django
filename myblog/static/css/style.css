@@ -65,3 +65,7 @@ textarea { overflow:auto; }
 #footer { font-family: Arial, sans-serif; font-size: 11px; line-height: 14px; color: #7f7f7f; padding: 18px 27px 20px 38px; }
 #footer a{ color: #7f7f7f; }
 
+.main__left_image{
+    border-radius: 15px;
+}
+
