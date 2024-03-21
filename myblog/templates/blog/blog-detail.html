@@ -44,7 +44,7 @@
                 <div class="form-comment">
                     <h3>Оставить комментарий</h3>
                     <div>
-                        <form action="#" method="post">
+                        <form action="{% url "add_comments" post.id %}" method="post">
                             {% csrf_token %}
                             <div>
                                 <label for="">Ваш комментарий</label>
@@ -63,6 +63,19 @@
                             </div>
                         </form>
                     </div>
+                </div>
+
+                <div>
+                    {% for comment in post.comments_set.all %}
+                        <div class="view-comment">
+                            <h3>
+                                {{ comment.name }}
+                            </h3>
+                            <p>
+                                {{ comment.text_comments }}
+                            </p>
+                        </div>
+                    {% endfor %}
                 </div>
 
                 <div class="cl">&nbsp;</div>
