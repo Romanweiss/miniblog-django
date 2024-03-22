@@ -41,6 +41,14 @@
                     </div>
                 </div>
 
+                <div class="likes">
+                    <br>
+                    <p>Понравилось: {{ post.likes_set.all.count }}</p>
+                    <br>
+                    <a href="{% url "add_likes" post.id %}">Нравится</a>
+                    <a href="{% url "del_likes" post.id %}">Не нравится</a>
+                </div>
+
                 <div class="form-comment">
                     <h3>Оставить комментарий</h3>
                     <div>
@@ -59,7 +67,9 @@
                                 <input type="email" name="email">
                             </div>
                             <div>
-                                <input type="submit">
+                                <!-- <input type="submit">"Оставить комментарий"<br> -->
+                                <button type="submit" class="add_comments-btn">Оставить комментарий</button>
+                                
                             </div>
                         </form>
                     </div>

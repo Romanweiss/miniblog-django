@@ -3,9 +3,10 @@
 body {
     font-size: 12px;
     line-height: 20px;
-    font-family: Georgia, Arial, Helvetica, Sans-Serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     background: url() repeat 0 0;
+    background-color: #e8e8e8;
 }
 
 a { color: #ff0000; text-decoration: none; cursor:pointer; }
@@ -69,3 +70,48 @@ textarea { overflow:auto; }
     border-radius: 15px;
 }
 
+.form-comment {
+    font-size: 18px;
+
+}
+
+.form-comment label {
+    margin: 10px 10px;
+}
+
+.form-comment input {
+    border-radius: 15px;
+    padding: 15px;
+    height: 15px;
+    width: 250px;
+
+}
+
+.form-comment textarea {
+    border-radius: 15px;
+    padding: 15px;
+    height: 150px;
+    width: 80%;
+    resize: vertical;
+}
+
+.form-comment div {
+    margin: 10px;
+}
+
+.view-comment {
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+.add_comments-btn {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.likes {
+    margin: 10px 10px;
+}

@@ -1,5 +1,6 @@
 from tkinter import CASCADE
 from django.db import models
+from django.forms import CharField
 
 
 class Post(models.Model):
@@ -45,3 +46,10 @@ class Comments(models.Model):
     class Meta:
         verbose_name = "Комментарий"
         verbose_name_plural = "Комментарии"
+
+class Likes(models.Model):
+    '''Лайки'''
+    ip = models.CharField('IP-адрес', max_length=50)
+    pos = models.ForeignKey(to=Post, on_delete=models.CASCADE, verbose_name='Публикация')
+
+    
